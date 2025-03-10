@@ -1,4 +1,5 @@
 
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
 #include <errno.h>
@@ -56,7 +57,7 @@ struct vector {
     }
 };
 
-void print(FILE *f, const vector &v)
+void print(FILE *f, const vector &v) // using of the reference 
 {
     for (size_t i = 0; i < v.size(); i++) {
         fprintf(f, "%d\n", v.at(i));
